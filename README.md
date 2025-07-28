@@ -21,19 +21,12 @@ npm install
 
 2. プロキシサーバーとReactアプリを同時起動:
 ```bash
-npm run dev
-```
-
-または、別々に起動する場合:
-```bash
-# ターミナル1: プロキシサーバー起動
-npm run server
-
-# ターミナル2: Reactアプリ起動  
-npm start
+npm run dev:local
 ```
 
 3. ブラウザで `http://localhost:3000` にアクセス
+
+**注意**: ローカル開発では`npm start`だけでは動作しません。CORSエラーを回避するため、必ず`npm run dev:local`を使用してプロキシサーバーと併用してください。
 
 ### Netlifyデプロイ
 
@@ -51,9 +44,9 @@ npm start
 
 ## 重要な注意点
 
-- **ローカル開発**: プロキシサーバー（ポート3001）とReactアプリ（ポート3000）の両方が起動している必要があります
-- **本番環境**: Netlify Functionsが自動的にプロキシ機能を提供します
-- CORSエラーを回避するため、プロキシ経由でFish Audio APIにアクセスします
+- **ローカル開発**: `npm run dev:local`でプロキシサーバー（ポート3001）とReactアプリ（ポート3000）を同時起動
+- **本番環境**: Netlify Edge Functionsが自動的にプロキシ機能を提供します
+- CORSエラーを回避するため、環境に応じたプロキシ経由でFish Audio APIにアクセスします
 
 ## 必要なもの
 

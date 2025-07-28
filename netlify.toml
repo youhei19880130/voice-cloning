@@ -5,17 +5,9 @@
 [build.environment]
   NODE_VERSION = "18"
 
-[[redirects]]
-  from = "/proxy/model"
-  to = "https://api.fish.audio/model"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/proxy/tts"
-  to = "https://api.fish.audio/v1/tts"
-  status = 200
-  force = true
+[[edge_functions]]
+  function = "proxy"
+  path = "/proxy/*"
 
 [[redirects]]
   from = "/*"

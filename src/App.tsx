@@ -3,7 +3,7 @@ import './App.css';
 
 // 開発環境とプロダクション環境で異なるAPI baseを使用
 const PROXY_API_BASE = process.env.NODE_ENV === 'production' 
-  ? '/api' 
+  ? '/proxy' 
   : 'http://localhost:3001/api';
 const MODEL_ID = '0d1f38e6c3fe415d9c79583d6781774b';
 

@@ -6,11 +6,18 @@
   NODE_VERSION = "18"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/proxy/model"
+  to = "https://api.fish.audio/model"
   status = 200
+  force = true
 
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
+  from = "/proxy/tts"
+  to = "https://api.fish.audio/v1/tts"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200
